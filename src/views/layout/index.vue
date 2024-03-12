@@ -14,8 +14,6 @@ import right from './right.vue'
 </script>
 <style scoped lang="less">
 .layout-wrap {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   .top {
@@ -24,15 +22,12 @@ import right from './right.vue'
     background: #f5d0d7;
   }
   .content {
-    flex: 1;
     display: flex;
+    height: calc(100vh - 50px);
     .left {
       width: 280px;
       border-right: 1px solid #fff;
       background: #eedde0;
-    }
-    .right {
-      flex: 1;
     }
   }
 }

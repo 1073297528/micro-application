@@ -25,7 +25,7 @@ const data = ref({
   path: route.path
 })
 
-const dataChange = (v) => {
+const dataChange = (v: any) => {
   console.log('通过datachange事件获取子应用的数据')
   console.log(v.detail.data)
 }
@@ -48,11 +48,8 @@ watch(
 )
 </script>
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.about {
+  display: flex;
+  align-items: center;
 }
 </style>
