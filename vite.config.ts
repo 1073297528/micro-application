@@ -6,13 +6,20 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-  ],
+  plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    host: true,
+    port: 1234
+    // proxy: {
+    //   '^/child-base': {
+    //     target: 'http://localhost:4321/',
+    //     changeOrigin: true
+    //   }
+    // },
   }
 })
