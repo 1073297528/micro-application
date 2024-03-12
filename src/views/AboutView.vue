@@ -30,8 +30,8 @@ const dataChange = (v: any) => {
   console.log(v.detail.data)
 }
 
-renamedMicroApp.addDataListener(appName, () => {
-  console.log('监听来自子应用的数据', data.value)
+renamedMicroApp.addDataListener(appName, (data: any) => {
+  console.log('监听来自子应用的数据', data)
 })
 
 watch(
